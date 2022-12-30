@@ -16,17 +16,12 @@ public class BeginsWith<T> implements IsGood<T> {
     char data[] = { 'a', 'b', 'c' };
     String str = new String(data);
 
-    public boolean isGood() {
-        String text;
+    public boolean isGood(T text) {
+
         if (((String) line).equals(((String) text).substring(0, ((String) line).length()))) {
             return true;
         }
         return false;
     }
 
-    @Override
-    public boolean isGood(T item) {
-        // TODO Auto-generated method stub
-        return false;
-    }
 }
